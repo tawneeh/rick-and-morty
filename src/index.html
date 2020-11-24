@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>Rick & Morty</title>
+  <title>Wubba Lubba Dub Dub</title>
 </head>
 <body>
   <div class="container">
     <h1>Rick and Morty!</h1>
-    <label for="character">Pick a Character</label>
-    <select name="character" id="character">
-    <option value="1">Rick</option> // value="num" is character id! 
-    <option value="2">Morty</option>
-    <option value="3">Summer</option>
-    <option value="4">Beth</option>
-    <option value="5">Jerry</option>
+    <label class="label" for="id">Pick a Character</label>
+    <select name="id" id="id">
+    <option value="0">Rick</option> 
+    <option value="1">Morty</option>
+    <option value="2">Summer</option>
+    <option value="3">Beth</option>
+    <option value="4">Jerry</option>
+    <option value="5">Abandango Cluster Princess</option>
+    <option value="6">Abradolf Lincler</option>
+    <option value="7">Adjudicator Rick</option>
+    <option value="8">Agency Director</option>
+    <option value="9">Alan Rails</option>
+    <option value="10">Albert Einstein</option>
+    <option value="11">Alexander</option>
+    <option value="12">Alien Googah</option>
+    <option value="13">Alien Morty</option>
+    <option value="14">Alien Rick</option>
+    <option value="15">Amish Cyborg</option>
+    <option value="16">Annie</option>
+    <option value="17">Antenna Morty</option>
+    <option value="19">Ants in my Eyes Jonhson</option>
     </select>
 
-    <button class="btn-success" id="characterInfo">Show me the info!</button>
-    <div class="show-character"></div>
+    <button type="button" class="btn-info">Click Me</button>
+    <div class="show-name"></div>
+    <div class="show-image"></div>
+    <div class="show-info">
+      <ul></ul>
+    </div>
     <div class="show-errors"></div>
   </div>
   <script type="text/javascript" src="bundle.js"></script>
