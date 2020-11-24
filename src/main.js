@@ -5,16 +5,19 @@ import './css/styles.css';
 import CharacterService from './js/rick-service.js';
 
 $(document).ready(function() {
-  $('#characterInfo').click(function() {
+  $('.btn-info').click(function() {
+
+    const id = $('#id :selected').val();
 
     let promise = CharacterService.getCharacter();
     promise.then(function(response) {
       const body = JSON.parse(response);
-      console.log(`${body.results[0].name}`);
-      $('.show-character').text(`${body.results[0].name}`);
-      console.log(`${body.results[0].name}`);
-      // this is where I specify what part of the API call response to show
-      // probably a .val not .text 
+
+      $('.show-name').text(`${body.results[id].name}`);
+      $('.show-image').html(`<img src="${body.results[id].image}">`);
+
+      $('.show-info').html(`<ul>Status: ${body.results[id].status}</ul> <ul>Species: ${body.results[id].species}</ul> <ul>Location: ${body.results[id].location.name}</ul> <ul>Number of Episodes: ${body.results[id].episode.length}</ul>`);
+
     },  function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error}`);
     });
